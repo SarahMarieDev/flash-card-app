@@ -23,7 +23,7 @@ def next_card():
     card.itemconfig(card_title, text="French", fill="black")
     card.itemconfig(card_word, text=current_card["French"], fill="black")
     card.itemconfig(card_background, image=card_front_img)
-    flip_timer = window.after(10000, flip_card)
+    flip_timer = window.after(3000, flip_card)
 
 def is_known():
     to_learn.remove(current_card)
@@ -59,7 +59,7 @@ check_image = PhotoImage(file="images/right.png")
 known_button = Button(image=check_image, highlightthickness=0, command=is_known, bd=0)
 known_button.grid(column=1, row=1)
 
-dataset_options = 
+#dataset_options = 
 
 next_card()
 
